@@ -14,11 +14,18 @@
 <body>
   
 <div id="choropleth_map"></div>
+
+<div id="bar-chart"></div>
 <title>Internet User By Country</title>
 <script type="text/javascript">
 
   var spec2 = "js/choropleth.map.vg.json";
   vegaEmbed('#choropleth_map', spec2).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+  
+  var bar = "js/Top-N Country.vg.json";
+  vegaEmbed('#bar-chart', bar).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
   }).catch(console.error);
 </script>
